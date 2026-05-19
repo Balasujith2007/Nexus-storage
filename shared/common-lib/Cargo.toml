@@ -1,0 +1,29 @@
+[package]
+name = "common-lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+axum = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+jsonwebtoken = { workspace = true }
+argon2 = { workspace = true }
+redis = { workspace = true }
+sqlx = { workspace = true }
+aes-gcm = { workspace = true }
+rand = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+validator = { workspace = true }
+bytes = { workspace = true }
+config = { workspace = true }
+dotenvy = { workspace = true }
+once_cell = { workspace = true }
+async-trait = { workspace = true }

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "System_Architecture_v2.pdf",
+    "size": "2.4 MB",
+    "type": "document",
+    "date": "5/15/2026",
+    "chunks": 24,
+    "sync": true
+  },
+  {
+    "id": 1778843015246,
+    "name": "GOWTHAMRESUME1.pdf",
+    "size": "138.76 KB",
+    "type": "pdf",
+    "date": "5/15/2026",
+    "chunks": 1,
+    "sync": false
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "node-alpha-01",
+    "name": "Alpha Core",
+    "ip": "192.168.1.10",
+    "capacity": 32,
+    "region": "US-East-1",
+    "status": "online",
+    "replicationEnabled": true
+  },
+  {
+    "id": "node-beta-02",
+    "name": "Beta Edge",
+    "ip": "192.168.1.11",
+    "capacity": 16,
+    "region": "EU-West-2",
+    "status": "online",
+    "replicationEnabled": true
+  },
+  {
+    "id": "node-gamma-03",
+    "name": "Gamma Backup",
+    "ip": "192.168.1.12",
+    "capacity": 64,
+    "region": "AP-South-1",
+    "status": "syncing",
+    "replicationEnabled": true
+  },
+  {
+    "id": "node-1778912613921",
+    "name": "server1",
+    "ip": " 192.168.1.10",
+    "capacity": 10,
+    "region": "US-West-2",
+    "status": "syncing",
+    "replicationEnabled": true
+  }
+]

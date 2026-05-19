@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 100%;
+  }
+  html {
+    scrollbar-gutter: stable;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+  @layer components {
+  .dashboard-container,
+  .app-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .notifications-panel {
+    position: fixed;
+    top: 88px;
+    right: 24px;
+    width: 380px;
+    max-height: 78vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9999;
+    background: linear-gradient(
+      180deg,
+      rgba(8,15,30,0.98),
+      rgba(5,10,20,0.96)
+    );
+    border: 1px solid rgba(59,130,246,0.18);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+    box-shadow:
+      0 0 35px rgba(59,130,246,0.18),
+      0 10px 40px rgba(0,0,0,0.45);
+  }
+
+  .notifications-panel::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .notifications-panel::-webkit-scrollbar-thumb {
+    background: rgba(148,163,184,0.35);
+    border-radius: 999px;
+  }
+
+  .enterprise-card {
+    background: linear-gradient(180deg, rgba(10,25,50,0.95), rgba(5,15,35,0.92)) !important;
+    border: 1px solid rgba(120,170,255,0.15) !important;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 10px 30px rgba(0,0,0,0.35) !important;
+    transition: all 0.3s ease !important;
+    border-radius: 16px;
+  }
+  
+  .enterprise-card:hover {
+    box-shadow: 0 0 25px rgba(59,130,246,0.25), 0 0 0 1px rgba(255,255,255,0.03), 0 10px 30px rgba(0,0,0,0.35) !important;
+  }
+
+  .enterprise-button {
+    padding: 10px 18px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.3s ease !important;
+    color: #E5F0FF !important;
+    font-weight: 600 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .enterprise-button:hover {
+    background: rgba(80, 120, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .enterprise-heading {
+    color: #E5F0FF !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .enterprise-description {
+    color: #cbd5e1 !important; /* text-slate-300 */
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Status Colors */
+  .status-online { color: #34d399 !important; } /* text-emerald-400 */
+  .status-syncing { color: #facc15 !important; } /* text-yellow-400 */
+  .status-offline { color: #f87171 !important; } /* text-red-400 */
+  .status-health { color: #22d3ee !important; } /* text-cyan-400 */
+  
+  /* Feed Timeline */
+  .feed-timeline-line {
+    box-shadow: 0 0 10px rgba(34,211,238,0.5);
+    background: linear-gradient(180deg, rgba(34,211,238,0.8), rgba(59,130,246,0.1));
+  }
+
+  .main-layout {
+    display: flex;
+    min-height: 100vh;
+    /* No overflow:hidden — that was blocking page scroll */
+    overflow-x: hidden;
+  }
+
+  .profile-wrapper {
+    position: relative;
+  }
+
+  .profile-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 260px;
+    z-index: 1000;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Natural vertical flow — do NOT set height or overflow-y here */
+  }
+
+  .chart-wrapper,
+  .card-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-10deg); }
+  30% { transform: rotate(5deg); }
+  40% { transform: rotate(-5deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
