@@ -7,6 +7,7 @@ use common_lib::{
     errors::AppError,
     models::User,
 };
+use sqlx::types::chrono;
 use uuid::Uuid;
 use validator::Validate;
 
