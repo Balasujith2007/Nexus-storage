@@ -1,8 +1,12 @@
 FROM rust:1.76 as builder
 ARG SERVICE
+ARG CACHEBUST=1
 
 WORKDIR /usr/src/app
 COPY . .
+
+# Cache bust to force rebuild - Updated: 2026-05-24
+RUN echo "Cache bust: ${CACHEBUST}"
 
 # Build only the specified service
 RUN cargo build --release --bin ${SERVICE}
