@@ -1,0 +1,15 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile.backend",
+    "buildArgs": {
+      "SERVICE": "metadata-service"
+    }
+  },
+  "deploy": {
+    "startCommand": "./metadata-service",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 100,
+    "restartPolicyType": "ON_FAILURE"
+  }
+}

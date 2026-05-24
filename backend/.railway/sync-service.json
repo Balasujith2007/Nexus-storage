@@ -1,0 +1,15 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile.backend",
+    "buildArgs": {
+      "SERVICE": "sync-service"
+    }
+  },
+  "deploy": {
+    "startCommand": "./sync-service",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 100,
+    "restartPolicyType": "ON_FAILURE"
+  }
+}

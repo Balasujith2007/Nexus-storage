@@ -1,0 +1,15 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile.backend",
+    "buildArgs": {
+      "SERVICE": "storage-node"
+    }
+  },
+  "deploy": {
+    "startCommand": "./storage-node",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 100,
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
