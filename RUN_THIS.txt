@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════════
+  PUSH TO GITHUB - CHOOSE YOUR METHOD
+═══════════════════════════════════════════════════════════
+
+METHOD 1: PowerShell Script (EASIEST for Windows)
+──────────────────────────────────────────────────
+1. Right-click on "push-helper.ps1"
+2. Select "Run with PowerShell"
+3. Follow the prompts
+4. Done!
+
+METHOD 2: Manual Commands
+──────────────────────────────────────────────────
+1. Get token from: https://github.com/settings/tokens
+2. Open terminal in Nexus-storage folder
+3. Run:
+   git remote set-url origin https://YOUR_TOKEN@github.com/Balasujith2007/Nexus-storage.git
+   git push origin master
+
+METHOD 3: GitHub Desktop
+──────────────────────────────────────────────────
+1. Open GitHub Desktop
+2. Click "Push origin" button
+3. Done!
+
+═══════════════════════════════════════════════════════════
+
+WHAT HAPPENS AFTER PUSHING:
+✅ Railway detects new code
+✅ Railway builds with fixed code
+✅ Deployment succeeds!
+
+═══════════════════════════════════════════════════════════
